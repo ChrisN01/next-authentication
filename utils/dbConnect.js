@@ -7,7 +7,7 @@ const dbConnect= async function () {
         return;
     }
 
-    mongoose.connect(process.env.MONGODB_URI);
+    mongoose.connect(process.env.DB_URI);
     
 }
 
