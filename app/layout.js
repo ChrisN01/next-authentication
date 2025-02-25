@@ -1,6 +1,6 @@
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import TopNav from "@/components/TopNav";
+import TopNav from "/components/TopNav";
 
 
 export const metadata = {
