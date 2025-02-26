@@ -18,7 +18,10 @@ export default function TopNav() {
                     <Link href="/dashboard/user" className="nav-link">{data?.user?.name}</Link>
                     <a className="nav-link pointer" onClick={()=> signOut({callbackUrl: "/login"})}>Logout</a>
                 </>
-            ):(<div className="d-flex">
+            ) : status === 'loading' ? (
+                <a className='nav-link text-danger'>Loading</a>
+
+            ) : (<div className="d-flex">
                     <Link href="/login" className="nav-link">Login</Link>
                     <Link href="/register" className="nav-link">Register</Link>
                 </div>
