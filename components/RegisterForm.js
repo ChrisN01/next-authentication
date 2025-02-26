@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
 
-export default function SignUpForm() {
+export default function RegisterForm() {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -22,7 +22,7 @@ export default function SignUpForm() {
             setLoading(true);
 
             console.log(name,email,password);
-            const response = await fetch(`${process.env.API}/signup`, {
+            const response = await fetch(`${process.env.API}/register`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -43,7 +43,7 @@ export default function SignUpForm() {
                 setName("");
                 setEmail("");
                 setPassword("");
-                router.push("/signin");
+                router.push("/login");
             }
 
 
